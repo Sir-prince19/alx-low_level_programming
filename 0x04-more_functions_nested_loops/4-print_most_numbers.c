@@ -1,19 +1,23 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * print_most_numbers - check the code for Holberton School students.
- * Return: Always 0.
+ * print_most_numbers - entry point
+ *
+ * Description: Prints the numbers with _putchar
+ *
+ * Return: void
  */
+
 void print_most_numbers(void)
 {
-	char c = '0';
+	int number;
 
-	while (c <= '9')
+	for (number = '0'; number <= '9'; number++)
 	{
-		if (c != '2' && c != '4')
-		{
-			_putchar(c);
-		}
-	c++;
+		if (number == '2' || number == '4')
+			;
+		else
+			_putchar(number);
 	}
-_putchar('\n');
+	_putchar('\n');
 }

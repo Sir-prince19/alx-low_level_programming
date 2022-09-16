@@ -1,26 +1,28 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * more_numbers - function that checks for uppercase character
- * Return: 0
+ * more_numbers - entry point
+ *
+ * Description: Prints the numbers with _putchar
+ *
+ * Return: void
  */
+
 void more_numbers(void)
 {
+	int count, i;
 
-	int a = 0;
-	int b = 0;
-
-	while (b <= 9)
+	count = 0;
+	for (count = 0; count < 10; count++)
 	{
-		while (a <= 14)
+		for (i = 0; i <= 14; i++)
 		{
-			if (a > 9)
-				_putchar(a / 10 + '0');
-			_putchar(a % 10 + '0');
-			a++;
-
+			if (i > 9)
+			{
+				_putchar((i / 10) + '0');
+			}
+			_putchar((i % 10) + '0');
 		}
-	_putchar('\n');
-	b++;
-	a = 0;
+		_putchar('\n');
 	}
 }
